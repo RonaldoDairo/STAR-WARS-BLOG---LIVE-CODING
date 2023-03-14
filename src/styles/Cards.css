@@ -1,0 +1,17 @@
+
+
+
+#carrousel {
+    display: flex;
+}
+#carrousel{
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+.card{
+    border: none;
+    width: 50%;
+    margin-left: 3rem;
+    margin-right: 4rem;
+}
