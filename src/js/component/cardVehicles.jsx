@@ -1,8 +1,10 @@
 import React from "react";
 import "../../styles/home.css";
-import { getData } from "../../services/services.jsx";
 
-export const Card = () => (
+export const CardVehicles = () => {
+    
+    
+    return (
 	
 	<div className="cardpeople col-md-6 col-sm-6  " >
 		<div class="card ml-5 text-center bg-transparent border-0 d-flex col-md-6" >
@@ -15,3 +17,4 @@ export const Card = () => (
 		</div>
 	</div>
 );
+}

@@ -14,7 +14,6 @@ export const getData = async(tipo, id="") => {
             console.log('err')
         }
 }
-
 // const [state, setState] = useState([]);
 // export const getData = (tipo, id = "") => {
 //   const URL = `https://www.swapi.tech/api/${tipo}/${id}`;

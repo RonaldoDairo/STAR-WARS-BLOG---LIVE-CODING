@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { CardPeople } from "../component/CardPeople.jsx";
+import { Carrousel } from "../component/Carrousel.jsx";
 import { getData } from "../../services/services.jsx";
 
 
@@ -12,14 +12,13 @@ export const Home = () => {
 	} 
 	
 	useEffect(() => {
-    //getData("people");
 	getPeople()
   	}, []);
 
-	
 	return (
 		<div className="text-center mt-5">
-		<CardPeople list={list}></CardPeople>
+		<Carrousel list={list}></Carrousel>
+		
 		</div>
 	);
 	};
