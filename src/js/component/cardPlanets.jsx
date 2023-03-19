@@ -1,27 +1,33 @@
 import React from "react";
 import "../../styles/home.css";
-
+import { Link } from "react-router-dom";
 export const CardPlanets = ( {listtwo} ) => {
 		
     return (
 	
-	<div className="cardpeople row   " >
+	<>
 		{listtwo.map((todo, index)=>{
                         return(
-							
-				<div className="card  text-center bg-transparent border-0  d-block col " >
-						<img src="https://images.unsplash.com/photo-1454923634634-bd1614719a7b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGVvcGxlJTIwYXQlMjB3b3JrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" className="card-img" alt="..." />
-						<div className="card-body cards">
-						<h5 className="card-title text-uppercase" key={index}>{todo.name}</h5>
-						<p className="card-text">Some quick </p>
-						<a href="#" id="boton" className="btn btn-primary">Go somewhere</a>
-						<i className="fa fa-heart text-warning  icons " />
+				<div className="row row-cols-1 row-cols-md-3 g-4">
+						<div className="col">
+							<div className="h-100">
+											<img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3RhciUyMHdhciUyMGxvZ298ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" class="card-img-top w-60" alt="..."/>
+											<div className="bodycard">
+											<h5 className="text-uppercase d-block" key={index}>{todo.name}</h5>
+											<p className="card-text">Some quick</p>
+											<Link to="/details">
+													<a href="#" id="boton" className="btn btn-primary" >Learn More!</a>
+											</Link>
+													<i className="fa fa-heart text-warning  icons " />
+											</div>
+							</div>
 						</div>
 				</div>
 				
                         )
                     })
                     }
-	</div>
+					
+	</>
 );
 }

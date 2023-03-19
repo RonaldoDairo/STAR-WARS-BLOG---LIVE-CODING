@@ -3,24 +3,28 @@
     padding: 0;
 }
 body{
-    
+     margin-left: 5rem;   
 }
 #carrousel {
-        margin-top: 2rem;
-        height: 420px;
-        padding-top:20px;   
-           
+    margin-top: 2rem;
+    height: 420px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    
 }
 #carrousel{
-    width: 230%;
+    width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 }
-img{
-    height: 15rem;    
+.bodycard{
+  
 }
+
 .heartr{
     margin-left: 2rem;
     vertical-align: middle
