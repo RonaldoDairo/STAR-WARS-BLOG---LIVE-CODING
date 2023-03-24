@@ -37,5 +37,13 @@ body{
     font-size: 2rem;
     vertical-align: middle   
 }
+.starwartim{
+    height: 100px;
+    width: 200px;
+}
+.iconsdelete{
+    margin-left: 1rem;
+    cursor: pointer;
+}
 
 

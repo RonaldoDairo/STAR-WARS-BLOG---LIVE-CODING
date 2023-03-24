@@ -6,9 +6,6 @@ import "../../styles/demo.css";
 
 export const Demo = () => {
 	const { store, actions } = useContext(Context);
-	console.log("aqui el store",store)
-	console.log("aqui las actions", actions)
-
 	return (
 		<div className="container">
 			<ul className="list-group">

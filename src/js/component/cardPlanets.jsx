@@ -1,7 +1,13 @@
-import React from "react";
+import React,{useContext} from "react";
+import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import { Link } from "react-router-dom";
 export const CardPlanets = ( {listtwo} ) => {
+	const { store, actions } = useContext(Context);
+	const addPlanetsFavorite = (name)=>{
+			actions.addFavorite(name)
+
+	}
 		
     return (
 	
@@ -15,10 +21,10 @@ export const CardPlanets = ( {listtwo} ) => {
 											<div className="bodycard">
 											<h5 className="text-uppercase d-block" key={index}>{todo.name}</h5>
 											<p className="card-text">Some quick</p>
-											<Link to="/details">
-													<a href="#" id="boton" className="btn btn-primary" >Learn More!</a>
+											<Link to={`/details/${todo.name}`}>
+											<a href="#" id="boton" className="btn btn-primary" >Learn More!</a>
 											</Link>
-													<i className="fa fa-heart text-warning  icons " />
+													<i className="fa fa-heart text-warning  icons text-uppercase " onClick={()=>addPlanetsFavorite(todo.name)} />
 											</div>
 							</div>
 						</div>

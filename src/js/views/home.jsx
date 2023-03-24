@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Carrousel } from "../component/Carrousel.jsx";
-import { getData } from "../../services/services.jsx";
+import {  getData } from "../../services/services.jsx";
 
 
 
@@ -18,13 +18,7 @@ export const Home = () => {
 			setlisttwoSet(datePlanets.results)
 			setlistthreeSet(dateVehicles.results)
 			setLoad(false)
-
-	} 
-	
-	//   const getPlanets = async()=>{
-		
-	// 	setlisttwoSet(datePlanets.results)
-	// } 
+	}
 	useEffect(() => {
 		getPeople()
 		}, []);
