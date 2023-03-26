@@ -15,6 +15,7 @@ export const Home = () => {
 			const datePlanets = await getData("planets")
 			const dateVehicles = await getData("vehicles")
 			setList(datePeople.results)
+			 console.log("SETLIST",datePeople.result)
 			setlisttwoSet(datePlanets.results)
 			setlistthreeSet(dateVehicles.results)
 			setLoad(false)
