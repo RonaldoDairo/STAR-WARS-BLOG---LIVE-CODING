@@ -21,9 +21,7 @@ body{
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 }
-.bodycard{
-  
-}
+
 
 .heartr{
     margin-left: 2rem;
@@ -40,10 +38,28 @@ body{
 .starwartim{
     height: 100px;
     width: 200px;
+    cursor: pointer;
 }
 .iconsdelete{
     margin-left: 1rem;
     cursor: pointer;
 }
 
+#infopersonaje{
+    display: flex;
+    justify-content: space-around;
+    color: red;
+    border-top: 1px  solid red;
+}
+.deleteIcon{
+    padding: 0 3.5px 0 3px;
+    color: white;
+    text-decoration: none;
+    background: gray;
+    border-radius: 5px;
+}
+.deleteIcon:hover{
+    color: red;
+    background-color: white;
+}
 

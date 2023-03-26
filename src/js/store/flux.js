@@ -18,20 +18,11 @@ const getState = ({ getStore, getActions, setStore, getState }) => {
 				}
 			},  
 			handleDelete : (indexToDelete) => {
-				const updatedArray = getStore();
-				updatedArray.favorite.splice(indexToDelete, 1)
-				setStore(updatedArray)
+					const updatedArray = getStore();
+					updatedArray.favorite.splice(indexToDelete, 1)
+					setStore(updatedArray)
 			  }
 			},
-			//  ELIMINAR_USUARIO_EXITOSO: ()=>{
-					 
-			//   ...state,
-			//   usuarios: state.usuarios.filter(
-			// 	(usuario) => usuario.id !== state.usuarioEliminar
-			//   ),
-			//   usuarioEliminar: null,
-			// };
-			
 		}
 	};
 

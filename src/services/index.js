@@ -1,6 +1,3 @@
-import React from "react";
-
-
 
 export const getData = async(tipo, id="") => {
     try{
@@ -14,12 +11,3 @@ export const getData = async(tipo, id="") => {
         }
 }
 
-export const getCharacterData = async (id) => {
-    try {
-      const response = await fetch(`https://www.swapi.tech/api/people/${id}`);
-      const data = await response.json();
-      return data
-    } catch (error) {
-      console.error(error);
-    }
-  }

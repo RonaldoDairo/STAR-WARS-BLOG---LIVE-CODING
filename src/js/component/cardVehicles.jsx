@@ -3,13 +3,12 @@ import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import { Link } from "react-router-dom";
 export const CardVehicles = ({ listthree }) => {
-	const { store, actions } = useContext(Context);
+	const { actions } = useContext(Context);
 	const addVehiclesFavorite = (name)=>{
 			actions.addFavorite(name)
 
 	}
 	
-    
     return (
 	
 	<>
@@ -23,7 +22,7 @@ export const CardVehicles = ({ listthree }) => {
 									<div className="bodycard">
 										<h5 className="text-uppercase d-block" key={index}>{todo.name}</h5>
 										<p className="card-text">Some quick</p>
-										<Link to={`/details/${todo.name}`}>
+										<Link to={`/detailsVehicles/vehicles/${todo.uid}`}>
 											<a href="#" id="boton" className="btn btn-primary" >Learn More!</a>
 										</Link>
 										<i className="fa fa-heart text-warning  icons " onClick={()=>addVehiclesFavorite(todo.name)} />

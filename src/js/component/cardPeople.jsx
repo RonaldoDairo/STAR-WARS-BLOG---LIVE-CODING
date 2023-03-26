@@ -1,25 +1,15 @@
-import React,{useContext, useState} from "react";
+import React,{ useContext } from "react";
 import { Context } from "../store/appContext";
-
 import "../../styles/home.css";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
  const CardPeople = ({list}) => {
-	const { store, actions } = useContext(Context);
-	const [task,setTask] = useState();
-	
-	// const navigate = useNavigate()
-
+	const { actions } = useContext(Context);
 	const addPeopleFavorite = (name)=>{
 			actions.addFavorite(name)
 	}
-
-
-	
-	return (
-		
+	return (	
 	<>
-		
 		{list.map((todo, index)=>{
                         return(
 							
@@ -30,8 +20,8 @@ import { Link} from "react-router-dom";
 										<div className="bodycard">
 											<h5 className="text-uppercase d-block" key={index}>{todo.name} </h5>
 											<p className="card-text" >  Some quick</p>
-											<Link to={`/details/${todo.name}`}>
-											<a href="#" id="boton" className="btn btn-primary" >Learn More!</a>
+											<Link to={`/details/people/${todo.uid}`}>
+											<a href="#" id="boton" className="btn btn-primary" >Learn More! </a>
 											</Link>
 											<i className="fa fa-heart text-warning  icons " onClick={()=>addPeopleFavorite(todo.name)}/>
 										</div>
